@@ -1,0 +1,25 @@
+jupyter contrib nbextension install --user
+jupyter nbextension enable --py widgetsnbextension
+jupyter trust class_notes/ants/ants_notebook.ipynb
+jupyter trust class_notes/ants/.ipynb_checkpoints/ants_notebook-checkpoint.ipynb
+jupyter trust class_notes/class05/class05_notebook.ipynb
+jupyter trust class_notes/class06/class06_notebook.ipynb
+jupyter trust class_notes/class07/class07_notebook.ipynb
+jupyter trust class_notes/class08/class08_notebook.ipynb
+jupyter trust class_notes/class09/class09_notebook.ipynb
+jupyter trust class_notes/class10/class10_notebook.ipynb
+jupyter trust class_notes/class11/class11_notebook.ipynb
+jupyter trust class_notes/class12/class12_notebook.ipynb
+jupyter trust class_notes/class12/interactive_undamped_oscillator.ipynb
+jupyter trust class_notes/class13/class13_notebook.ipynb
+jupyter trust class_notes/class14/class14_notebook.ipynb
+jupyter trust class_notes/class15/class15_notebook.ipynb
+jupyter trust class_notes/class16/class16_notebook.ipynb
+jupyter trust class_notes/class17/class17_notebook.ipynb
+jupyter trust class_notes/class18/class18_notebook.ipynb
+jupyter trust class_notes/class18/module_9-1_practice_questions.ipynb
+jupyter trust class_notes/class19/class19_notebook.ipynb
+jupyter trust class_notes/class20/class20_notebook.ipynb
+jupyter trust class_notes/forest_fire/forest_fire_notebook.ipynb
+jupyter trust class_notes/heat_diffusion/heat_diffusion_notebook.ipynb
+jupyter trust class_notes/wrapup/wrapup_notebook.ipynb

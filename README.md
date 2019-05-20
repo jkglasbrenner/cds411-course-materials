@@ -1,6 +1,8 @@
 CDS 411 course materials
 ================
 
+[![](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/jkglasbrenner/cds411-course-materials/master)
+
   - [Topic schedule](#topic-schedule)
   - [Readings](#readings)
   - [Homeworks](#homeworks)
