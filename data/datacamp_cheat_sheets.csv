@@ -1,0 +1,9 @@
+Cheat sheet,Description
+"[![Python for Data Science Cheat Sheet - Jupyter Notebook](img/datacamp-numpy-basics.png)](cheatsheets/datacamp-numpy-basics.pdf)","Basics of the Jupyter Notebook"
+"[![Python for Data Science Cheat Sheet - NumPy Basics](img/datacamp-matplotlib-data-visualization.png)](cheatsheets/datacamp-matplotlib-data-visualization.pdf)","NumPy Basics"
+"[![Python for Data Science Cheat Sheet - SciPy - Linear Algebra](img/datacamp-scipy-linear-algebra.png)](cheatsheets/datacamp-scipy-linear-algebra.pdf)","SciPy - Linear Algebra"
+"[![Python for Data Science Cheat Sheet - Matplotlib](img/datacamp-jupyter-notebook-basics.png)](cheatsheets/datacamp-jupyter-notebook-basics.pdf)","Data visualization with Matplotlib"
+"[![Python for Data Science Cheat Sheet - Seaborn](img/datacamp-seaborn-data-visualization.png)](cheatsheets/datacamp-seaborn-data-visualization.pdf)","Data visualization with Seaborn"
+"[![Python for Data Science Cheat Sheet - Importing Data](img/datacamp-importing-data.png)](cheatsheets/datacamp-importing-data.pdf)","Importing Data"
+"[![Python for Data Science Cheat Sheet - Pandas](img/datacamp-pandas-data-wrangling.png)](cheatsheets/datacamp-pandas-data-wranglings.pdf)","Data transformation and reshaping with Pandas"
+"[![Python for Data Science Cheat Sheet - Scikit-Learn](img/datacamp-scikit-learn.png)](cheatsheets/datacamp-scikit-learn.pdf)","Machine learning with Scikit-Learn"

@@ -1,0 +1,226 @@
+---
+title: CDS 411 <br> Class 3 <br> Python fundamentals
+author: James K. Glasbrenner
+---
+
+class: center, middle, title-slide
+
+.upper-right[
+```{r logo, eval = TRUE, echo = FALSE, out.width = "605px"}
+knitr::include_graphics("../../img/cds-411-logo.png")
+```
+]
+
+.lower-right[
+```{r cc-by-sa, eval = TRUE, echo = FALSE, out.width = "88px"}
+knitr::include_graphics("../../img/cc-by-sa.png")
+```
+
+These slides are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+]
+
+# Python fundamentals
+.title-hline[
+## Class 3
+]
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+source("../../R/xaringan_setup.R")
+source("../../R/reticulate_setup.R")
+```
+
+---
+
+class: middle, center, inverse
+
+# Python as a calculator
+
+---
+
+# Arithmetic
+
+Basic arithmetic is easy to do in Python
+
+* Addition, subtraction, multiplication, division
+
+* Raising to a power
+
+* Order of operations
+
+```{python arithmetic-demo}
+print(3 * (5 / 8 - 1.25) ** 2)
+```
+
+The `print()` function is the easiest way to tell Python to show output.
+
+---
+
+# Variable assignment
+
+Just like in algebra or in other programming languages, we can use variable assignment to store values for future use.
+
+```{python}
+length_of_bridge = 15
+```
+
+To see what's in the variable, we can print it:
+
+```{python}
+print(length_of_bridge)
+```
+
+You can increment variables easily in Python:
+
+```{python}
+# What do you think the result will be?
+length_of_bridge += 2 * length_of_bridge
+```
+
+--
+
+```{python}
+print(length_of_bridge)
+```
+
+---
+
+class: middle, center, inverse
+
+# The import statement
+
+---
+
+# Arithmetic with mathematical functions
+
+Python has built-in support for mathematical functions like sines, cosines, exponentials, factorials, etc. However, you need to load them in first.
+
+```{python import-math-module}
+import math
+```
+
+After running this, the mathematical functions can be accessed by appending a period `.` to the end of the word `math`, and then typing out the correct function name.
+
+```{python}
+print(math.factorial(12))         # Evaluates 12!
+print(5 * math.sin(math.pi / 3))  # Evaluates 5sin(𝜋/3)
+```
+
+---
+
+# Loading external .py files
+
+The import statement can also be used to load `.py` files. Say you have a file named `my_program.py` **in the same directory as the file or Jupyter notebook you're currently editing.** To load the code from `my_program.py`, used
+
+```python
+import my_program
+```
+
+This will cause the code inside `my_program.py` to be executed once. If any functions were defined in this file, for example a function named `my_great_method()`, you can access it in the same way you use the `math` module:
+
+```python
+my_program.my_great_method()
+```
+
+---
+
+# The Python Standard Library
+
+`math` is not the only built-in module available in Python. A full list of all available modules along with their documentation are available online: <https://docs.python.org/3.6/library/>
+
+Examples of modules I use a lot are:
+
+* .mono[`re`]: Support for regular expressions
+* .mono[`collections`]: Specialized container data types for Python
+* .mono[`itertools`]: Functions creating iterators for efficient looping
+* .mono[`functools`]: Higher-order functions and operations on callable objects
+* .mono[`pathlib`]: Object-oriented filesystem paths
+* .mono[`shutil`]: High-level file operations
+* .mono[`os`]: Miscellaneous operating system interfaces
+* .mono[`logging`]: Logging facility for Python
+* .mono[`subprocess`]: Subprocess management
+* .mono[`sys`]: System-specific parameters and functions
+
+and more!
+
+---
+
+class: middle, center, inverse
+
+# Data structures
+
+---
+
+# Using lists
+
+* What is a list?
+
+* Lists are not vectors.
+
+* Anything can go into a list.
+
+* How to access and slice elements in a list.
+
+* Nesting lists
+
+* Appending to lists
+
+* Joining lists
+
+---
+
+# Dictionaries
+
+* What is a Python dictionary?
+
+* Key-value pairs
+
+* Nearly anything can be a key or a value
+
+* Lists can go in dictionaries
+
+* Nested dictionaries
+
+* Viewing keys and values
+
+* Accessing with brackets versus `.get()`
+
+---
+
+# Other structures
+
+* Tuples
+
+* Sets
+
+---
+
+class: middle, center, inverse
+
+# Control flow
+
+---
+
+# Loops
+
+* What are loops and iteration?
+
+* Basic for loops with `range()`
+
+* For loop over list with enumeration
+
+* DON'T USE COUNTER VARIABLES
+
+* Looping over dictionaries
+
+---
+
+# Credits
+
+.left-column[
+License
+]
+
+.right-column[
+[Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
+]

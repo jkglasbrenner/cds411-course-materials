@@ -1,0 +1,350 @@
+---
+title: CDS 411 <br> Class 4 <br> Python fundamentals and scientific computing with Python
+author: James K. Glasbrenner
+---
+
+class: center, middle, title-slide
+
+.upper-right[
+```{r logo, eval = TRUE, echo = FALSE, out.width = "605px"}
+knitr::include_graphics("../../img/cds-411-logo.png")
+```
+]
+
+.lower-right[
+```{r cc-by-sa, eval = TRUE, echo = FALSE, out.width = "88px"}
+knitr::include_graphics("../../img/cc-by-sa.png")
+```
+
+These slides are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+]
+
+# .font70[Python fundamentals and scientific computing with Python]
+.title-hline[
+## Class 4
+]
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+source("../../R/xaringan_setup.R")
+source("../../R/reticulate_setup.R")
+```
+
+---
+
+class: middle, center, inverse
+
+# Control flow
+
+---
+
+# Loops
+
+* .lightgray[What are loops and iteration?]
+
+* .lightgray[Basic for loops with range()]
+
+* .lightgray[For loop over list with enumeration]
+
+* .lightgray[DON'T USE COUNTER VARIABLES]
+
+* .lightgray[Looping over dictionaries]
+
+* .red[List comprehensions, or, "the in-line for loop"]
+
+---
+
+# List comprehensions
+
+Assume we have a list within a list:
+
+```{python}
+mylist_2d = [[0, 2], [2, 4], [4, 6], [6, 8]]
+```
+
+List comprehensions make it simple to extract the values within the first and second *columns*:
+
+```{python}
+mylist_col_one = [value[0] for value in mylist_2d]
+mylist_col_two = [value[1] for value in mylist_2d]
+print("Column 1: {0}\nColumn 2: {1}".format(mylist_col_one,
+                                            mylist_col_two))
+```
+
+---
+
+# List comprehensions
+
+Alternative would be to use a `for` loop:
+
+```{python}
+mylist_col_one = []
+mylist_col_two = []
+for value in mylist_2d:
+    mylist_col_one.append(value[0])
+    mylist_col_two.append(value[1])
+
+print("Column 1: {0}\nColumn 2: {1}".format(mylist_col_one,
+                                            mylist_col_two))
+```
+
+---
+
+# Boolean logic: Comparisons
+
+.pull-left[
+| Operation | Meaning                  |
+| ------    | ------------------------ |
+| <	        | strictly less than       |
+| <=        | less than or equal       |
+| >         | strictly greater than    |
+| >=        | greater than or equal    |
+| ==        | equal                    |
+| !=        | not equal                |
+| is        | object identity          |
+| is not    | negated object identity  |
+]
+
+.pull-right.code80[
+```{python}
+print(1 < 2,
+      True == False,
+      True is False,
+      sep = "\n")
+```
+
+```{python}
+x = None
+print(x == None,  #  not "Pythonic"
+      x is None,  # "Pythonic"
+      sep = "\n")
+```
+]
+
+---
+
+# Boolean logic: Operators and chaining
+
+.pull-left[
+**Operators:** .mono[and], .mono[or], .mono[not]
+
+| Operation      | Result                                                |
+| ------         | ----------                                            |
+| .mono[x or y]  | if x is false, then y, else x                         |
+| .mono[x and y] | if x is false, then x, else y                         |
+| .mono[not x]   | if x is false, then .mono[True],<br>else .mono[False] |
+
+**Chaining**
+
+* Two ways to write mathematical statements like $a \leq b < c$.
+* More complex statements should be enclosed in parentheses and connected with operators
+]
+
+.pull-left[
+```{python}
+a, b, c = (3, 4, 5)
+print(a <= b < c,
+      (a <= b) and (b < c),
+      sep = "\n")
+```
+]
+
+---
+
+# Branching with if statements
+
+```{r python-if-statement, echo = FALSE, out.width = "50%"}
+knitr::include_graphics("https://data36.com/wp-content/uploads/2018/01/1-Python-if-statement-logic-768x374.png")
+```
+--
+
+.code80[
+```{python}
+a = 10
+b = 20
+c = 30
+
+if (a + b) / c == 1 and c - b - a == 0:
+    print('yes')
+
+else:
+    print('no')
+```
+]
+
+---
+
+# Branching with if statements
+
+```{r python-if-elif-else-statement, echo = FALSE, out.width = "50%"}
+knitr::include_graphics("https://data36.com/wp-content/uploads/2018/01/10-Python-if-statement-condition-sequence-logic-768x355.png")
+```
+
+--
+
+.code80[
+```{python}
+a = 10
+b = 11
+c = 10
+
+if a == b:
+    print('first condition is true')
+
+elif a == c:
+    print('second condition is true')
+
+else:
+    print('nothing is true. existence is pain.')
+```
+]
+
+---
+
+# Whitespace in Python
+
+* How Python uses whitespace
+
+* When it's mandatory
+
+* When it's optional, but recommended
+
+---
+
+class: middle, center, inverse
+
+# User-defined functions
+
+---
+
+# Functions: What are they?
+
+* You've used them already, you just haven't made your own.
+
+* Why bother? 
+
+* Don't Repeat Yourself (DRY) and building with legos
+
+* Ideal use case: small re-usable pieces that do one thing.
+
+* Basic idea: You have a set of instructions that take inputs and steps through the instructions. You may or may not get an output, depending on what you want to do.
+
+* Every modern language uses them, even Matlab!
+
+  ```matlab
+  % Example of a function definition in Matlab
+
+  function m = avg(x,n)
+  m = sum(x)/n;
+  end
+  ```
+
+---
+
+# Structure of a Python function
+
+```python
+def your_awesome_function(input1, input2, input3="default"):
+    """The docstring that explains what your function does.
+    
+    Information about the inputs usually follows.
+    """
+    # A list of commands, just like you would write in a
+    # procedural Python program.
+    if input3 == "default:
+        a = input1 + input2
+
+    else:
+        a = 0
+    
+    # How to return the value of a
+    return a
+```
+
+---
+
+# Getting used to making functions
+
+```python
+a = 10
+b = 11
+c = 10
+
+if a == b:
+    print('first condition is true')
+
+elif a == c:
+    print('second condition is true')
+
+else:
+    print('nothing is true. existence is pain.')
+```
+
+---
+
+# Getting used to making functions
+
+```{python}
+def test_my_inputs(a, b, c):
+    if a == b:
+        message = 'first condition is true'
+    
+    elif a == c:
+        message = 'second condition is true'
+    
+    else:
+        message = 'nothing is true. existence is pain.'
+
+    return message
+
+
+print(test_my_inputs(10, 11, 10))
+```
+
+---
+
+class: middle, center, inverse
+
+# Scientific computing with the `numpy` package
+
+---
+
+# Building up n-dimensional arrays
+
+Import numpy package with alias `np`:
+
+```{python}
+import numpy as np
+```
+
+```{python}
+mylist_2d = [[87, 84, 91],
+             [19, 64, 25],
+             [24, 95, 9]]
+mymatrix_2d = np.array(mylist_2d)
+print(mymatrix_2d)
+```
+
+---
+
+# Numpy demos
+
+.vhalign-slide[
+Demo
+]
+
+---
+
+# Credits
+
+.left-column[
+License
+
+Acknowledgments
+]
+
+.right-column[
+[Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
+
+Source for If statement examples: <https://data36.com/python-if-statements-explained-data-science-basics/>
+]
