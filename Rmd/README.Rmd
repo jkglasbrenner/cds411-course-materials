@@ -12,6 +12,8 @@ homeworks <- readr::read_csv("../data/homeworks.csv")
 datacamp_cheat_sheets <- readr::read_csv("../data/datacamp_cheat_sheets.csv")
 ```
 
+[![](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/jkglasbrenner/cds411-course-materials/master)
+
 *   [Topic schedule](#topic-schedule)
 *   [Readings](#readings)
 *   [Homeworks](#homeworks)
