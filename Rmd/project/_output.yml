@@ -1,0 +1,9 @@
+---
+github_document:
+  toc: true
+  toc_depth: 4
+  dev: svg
+  df_print: kable
+  html_preview: false
+  pandoc_args: --webtex
+...

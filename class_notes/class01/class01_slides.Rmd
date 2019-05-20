@@ -1,0 +1,208 @@
+---
+title: CDS 411 <br> Class 1 <br> Course toolbox
+author: James K. Glasbrenner
+---
+
+class: center, middle, title-slide
+
+.upper-right[
+```{r logo, eval = TRUE, echo = FALSE, out.width = "605px"}
+knitr::include_graphics("../../img/cds-411-logo.png")
+```
+]
+
+.lower-right[
+```{r cc-by-sa, eval = TRUE, echo = FALSE, out.width = "88px"}
+knitr::include_graphics("../../img/cc-by-sa.png")
+```
+
+These slides are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+]
+
+# Course toolbox
+.title-hline[
+## Class 1
+]
+
+```{r setup, include = FALSE}
+# DO NOT ALTER THIS CHUNK
+source("../../R/xaringan_setup.R")
+```
+
+---
+
+class: middle, center, inverse
+
+# Getting started with Anaconda
+
+---
+
+# Anaconda: things to discuss
+
+* What is Anaconda?: <https://www.anaconda.com/what-is-anaconda/>
+
+* Where to find Anaconda: <https://www.anaconda.com/download>
+
+* The (new) initial setup, read the release notes for details: <https://conda.io/docs/release-notes.html#id24>
+
+* What are virtual environments, documentation here: <https://conda.io/docs/user-guide/tasks/manage-environments.html>
+
+---
+
+# The environment.yaml file
+
+.pull-left.code80[
+```yaml
+---
+name: cds411
+channels:
+  - defaults
+dependencies:
+  - jupyter=1.0.0
+  - jupyterlab=0.34.3
+  - matplotlib=2.2.3
+  - nodejs
+  - numpy=1.15.0
+  - pandas=0.23.4
+  - pandoc=2.2.3.2-0
+  - python=3.6.5
+  - scikit-learn=0.19.1
+  - scipy=1.1.0
+  - seaborn=0.9.0
+  - statsmodels=0.9.0
+  - pip:
+    - yapf==0.23.0
+...
+```
+]
+
+--
+
+.pull-right[
+* Save the `environment.yaml` file to your computer, then run
+
+  .code60[
+  ```sh
+  conda env create --file environment.yaml
+  ```
+  ]
+  
+* To activate environment after the installation completes, run
+
+  ```sh
+  conda activate cds411
+  ```
+]
+
+---
+
+# Conda commands to remember
+
+```sh
+# Using the conda package manager
+conda search <package-name>    # Search for <package-name>
+conda install <package-name>   # Install <package-name>
+conda list                     # List installed packages
+
+# Create new virtualenv named <my-env> with Python 3.6
+conda create -n <my-env> python=3.6
+
+# Managing your conda environments
+conda env list                 # List your virtualenvs
+conda activate <my-env>        # Use <my-env> virtualenv
+conda deactivate               # Deactivate virtualenv
+conda remove -n <my-env> --all # Remove virtualenv
+
+# Install environment using environment.yaml file
+conda env create --file environment.yaml
+
+# Update environment using environment.yaml file
+conda env update --file environment.yaml
+```
+
+---
+
+class: middle, center, inverse
+
+# JupyterLab
+
+---
+
+# JupyterLab: things to discuss
+
+.code90.font90[
+* What is JupyterLab?
+* Install plugins
+  * Install the `git` plugin:
+    ```sh
+    jupyter labextension install @jupyterlab/git
+    ```
+  * Install the GitHub plugin:
+    ```sh
+    jupyter labextension install @jupyterlab/github
+    ```
+* **Launching JupyterLab**
+
+  Open up a command prompt, activate the `cds411` conda environment, and run
+  ```sh
+  jupyter lab
+  ```
+  By default, your web browser may launch and show you an interface. If it doesn't, open your browser and type `localhost:8888` in the address bar and press enter.
+* JupyterLab tour: where can you find things and suggested settings
+]
+
+---
+
+class: middle, center, inverse
+
+# `git` and GitHub
+
+---
+
+# Version control
+
+.footnote[
+Source: https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+]
+
+.quote-container[
+> What is “version control”, and why should you care? Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+]
+
+---
+
+# How git does version control
+
+.footnote[
+Source: https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
+]
+
+```{r git-checkins-schematic, echo = FALSE}
+knitr::include_graphics("https://git-scm.com/book/en/v2/images/snapshots.png")
+```
+
+.quote-container[
+> Git thinks of its data more like a series of snapshots of a miniature filesystem. With Git, every time you commit, or save the state of your project, Git basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. To be efficient, if files have not changed, Git doesn’t store the file again, just a link to the previous identical file it has already stored. Git thinks about its data more like a stream of snapshots.
+]
+
+---
+
+# GitHub
+
+* What is GitHub?
+
+* Navigating the site: http://book.cds101.com/navigating-the-github-site.html
+
+* The repository page: http://book.cds101.com/repositories.html
+
+---
+
+# Credits
+
+.left-column[
+License
+]
+
+.right-column[
+[Creative Commons Attribution-ShareAlike 4.0 International](https://creativecommons.org/licenses/by-sa/4.0/)
+]

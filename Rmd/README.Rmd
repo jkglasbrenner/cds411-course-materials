@@ -1,0 +1,90 @@
+---
+title: CDS 411 course materials
+---
+
+```{r setup, include = FALSE}
+source("../R/rmarkdown_setup.R")
+options(knitr.kable.NA = "")
+topic_schedule <- readr::read_csv("../data/calendar.csv")
+readings <- readr::read_csv("../data/readings.csv")
+software <- readr::read_csv("../data/software.csv")
+homeworks <- readr::read_csv("../data/homeworks.csv")
+datacamp_cheat_sheets <- readr::read_csv("../data/datacamp_cheat_sheets.csv")
+```
+
+*   [Calendar](#calendar)
+*   [Readings](#readings)
+*   [Homeworks](#homeworks)
+*   [Final project](#final-project)
+*   [Resources and links](#resources-and-links)
+    *   [Datacamp cheat sheets](#datacamp-cheat-sheets)
+    *   [Software](#software)
+*   [License](#license)
+
+## Topic schedule
+
+```{r topic-schedule, echo = FALSE}
+knitr::kable(
+  x = topic_schedule,
+  format = "pandoc",
+)
+```
+
+## Readings
+
+```{r readings, echo = FALSE}
+knitr::kable(
+  x = readings,
+  format = "pandoc"
+)
+```
+
+## Homeworks
+
+```{r homeworks, echo = FALSE}
+knitr::kable(
+  x = homeworks,
+  format = "pandoc"
+)
+```
+
+## Final project
+
+**Instructions:** [project/final\_project.md](project/final_project.md)  
+
+## Resources and links
+
+### Datacamp cheat sheets
+
+[Datacamp][datacamp-url] has put together a series of [*Python for Data Science* cheat sheets][datacamp-cheat-sheets-url] that you can use as a quick reference during the class.
+The most relevant ones have been downloaded to this repository and are linked below:
+
+```{r datacamp-cheat-sheets, echo = FALSE}
+knitr::kable(
+  x = datacamp_cheat_sheets,
+  format = "pandoc"
+)
+```
+
+### Software
+
+The following software is not required for participating in the course, but may be useful in your workflow.
+
+```{r software, echo = FALSE, results = 'asis'}
+knitr::kable(
+  x = software,
+  format = "html",
+  escape = FALSE
+)
+```
+
+## License
+
+[![Creative Commons License][cc-by-sa-4-img]][cc-by-sa-4]
+
+Unless otherwise noted, the course materials in this repository are licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License][cc-by-sa-4].
+
+[cc-by-sa-4]:                http://creativecommons.org/licenses/by-sa/4.0/
+[datacamp-url]:              https://datacamp.com
+[cc-by-sa-4-img]:            https://i.creativecommons.org/l/by-sa/4.0/88x31.png
+[datacamp-cheat-sheets-url]: https://www.datacamp.com/community/data-science-cheatsheets

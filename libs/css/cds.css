@@ -1,0 +1,473 @@
+.remark-slide-content {
+  background-color: #FAFAFA;
+  border-top: 80px solid #006633;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.5;
+  padding: 1em 3em 1em 3em;
+}
+
+.title-slide .inverse .remark-slide-content {
+  background-color: #FAFAFA;
+}
+
+.inverse {
+  background-color: #87908F;
+  border-top: 80px solid #87908F;
+  text-shadow: none;
+}
+
+.remark-slide-content > h1 {
+  font-family: 'Fira Sans';
+  font-weight: 500;
+  font-size: 45px;
+  margin-top: -95px;
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+  color: #FAFAFA;
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+.remark-slide-content > inverse {
+  width: 112px;
+  height: 47px;
+  border-bottom: 1px solid black;
+  position: absolute;
+}
+
+.remark-slide-content > h2 {
+  padding-top: -15px;
+  padding-bottom: 00px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 35px;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 00px;
+}
+
+.remark-slide-content > h3 {
+  padding-top: -15px;
+  padding-bottom: 10px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 30px;
+  text-align: left;
+  margin-left: 00px;
+}
+
+.title-slide {
+  background-color: #FAFAFA;
+  border-top: 0;
+  background-size: cover;
+  padding: 1em 2em 1em 2em;
+}
+
+.title-slide > h1  {
+  color: #1A292C;
+  font-size: 40px;
+  text-shadow: none;
+  font-weight: 500;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 25px;
+  padding-top: 80px;
+  padding-bottom: 30px;
+}
+
+.title-slide > h2  {
+  margin-top: -25px;
+  padding-bottom: -20px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 35px;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.title-slide > .title-hline h2  {
+  margin-top: -25px;
+  border-top: 1px solid #F7941E;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.title-slide > h3  {
+  color: #1A292C;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: -30px;
+}
+
+.title-slide > .title-hline h3  {
+  color: #1A292C;
+  border-top: 1px solid #F7941E;
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 25px;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: -30px;
+  padding-top: 10px;
+}
+
+.remark-slide-number {
+  font-size: 13pt;
+  font-family: 'Fira Sans';
+  font-weight: 300;
+  color: #272822;
+  opacity: 1;
+}
+.inverse .remark-slide-number {
+  font-size: 13pt;
+  font-family: 'Fira Sans';
+  font-weight: 300;
+  color: #FAFAFA;
+  opacity: 1;
+}
+
+/* turns off slide numbers for title page: https://github.com/gnab/remark/issues/298 */
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+.latex .remark-code {
+  padding: 0 0.0625rem 0 0.0625rem;
+  font-weight: normal;
+  color: #1A292C;
+  contain: content;
+}
+
+.latex .remark-inline-code {
+  /* background: #F5F5F5; /* lighter */
+  /* background: #e7e8e2; /* darker */
+  /* border-radius: 3px; */
+  padding: 2px;
+  border: 0;
+  background: none;
+  color: #1A292C;
+}
+
+.remark-code {
+  padding: 0 0.0625rem 0 0.0625rem;
+  font-weight: normal;
+  color: #ac1d37;
+  contain: content;
+}
+
+.remark-inline-code {
+  /* background: #F5F5F5; /* lighter */
+  /* background: #e7e8e2; /* darker */
+  /* border-radius: 3px; */
+  padding: 4px;
+  background: #edefe5;
+  border: solid thin #c8ccae;
+  color: #ac1d37;
+}
+
+h1 > .remark-inline-code {
+  /* background: #F5F5F5; /* lighter */
+  /* background: #e7e8e2; /* darker */
+  /* border-radius: 3px; */
+  padding: 4px;
+  background: none;
+  border: none;
+  color: #ffcc33;
+  font-weight: bold;
+}
+
+.code10 .remark-code {
+  font-size: 10%;
+}
+
+.code20 .remark-code {
+  font-size: 20%;
+}
+
+.code30 .remark-code {
+  font-size: 30%;
+}
+
+.code40 .remark-code {
+  font-size: 40%;
+}
+
+.code50 .remark-code {
+  font-size: 50%;
+}
+
+.code60 .remark-code {
+  font-size: 60%;
+}
+
+.code70 .remark-code {
+  font-size: 70%;
+}
+
+.code80 .remark-code {
+  font-size: 80%;
+}
+
+.code90 .remark-code {
+  font-size: 90%;
+}
+
+.code100 .remark-code {
+  font-size: 100%;
+}
+
+.font10 {
+  font-size: 10%;
+}
+
+.font20 {
+  font-size: 20%;
+}
+
+.font30 {
+  font-size: 30%;
+}
+
+.font40 {
+  font-size: 40%;
+}
+
+.font50 {
+  font-size: 50%;
+}
+
+.font60 {
+  font-size: 60%;
+}
+
+.font70 {
+  font-size: 70%;
+}
+
+.font75 {
+  font-size: 75%;
+}
+
+.font80 {
+  font-size: 80%;
+}
+
+.font90 {
+  font-size: 90%;
+}
+
+.font100 {
+  font-size: 100%;
+}
+
+.font110 {
+  font-size: 110%;
+}
+
+.font120 {
+  font-size: 120%;
+}
+
+.font130 {
+  font-size: 130%;
+}
+
+.font140 {
+  font-size: 140%;
+}
+
+.font150 {
+  font-size: 150%;
+}
+
+.font160 {
+  font-size: 160%;
+}
+.font170 {
+  font-size: 170%;
+}
+.font180 {
+  font-size: 180%;
+}
+.font190 {
+  font-size: 190%;
+}
+.font200 {
+  font-size: 200%;
+}
+
+.footnote {
+  font-size: 70%;
+  font-weight: 300;
+}
+
+.title-slide .upper-right {
+  position: absolute;
+  width: 300px;
+  top: 0;
+  right: 50px;
+}
+
+.title-slide .lower-right {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  right: 50px;
+  font-size: 40%;
+}
+
+.quote-container blockquote {
+  margin: 20px 0;
+  padding-left: 1.5rem;
+  border-left: 3px solid #006633;
+  font-size: 1em;
+  font-style: italic;
+}
+
+.cite {
+  color: #87908F;
+  font-style: normal;
+  font-size: 0.8em;
+  display: block;
+  margin-top: 5px;
+}
+
+.cite:before {
+  content: "\2014 \2009";
+}
+
+.qa {
+  background-color: rgba(30, 98, 56, 0.1);
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 1rem;
+  padding-bottom: 0rem;
+  color: #006633;
+  display: block;
+  font-size: 1em;
+  margin-bottom: 0.8em;
+}
+
+.qa p {
+  margin: 0;
+  padding-bottom: 1.0rem;
+  line-height: 1.3;
+}
+
+.answer {
+  display: block;
+  background-color: rgba(228, 230, 215, 0.5);
+  font-size: 1em;
+  font-style: italic;
+  padding-top: 0.5px;
+  padding-bottom: 0.5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-bottom: 0.8em;
+}
+
+.red {
+  color: #AC1D37;
+}
+
+.lightgray {
+  color: #D1D3D5;
+}
+
+.mono {
+  font-family: "Fira Mono";
+  overflow-x: auto;
+  padding: 0.05em;
+  background: #F0F0F0;
+}
+
+.valign-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1em 3em 1em 3em;
+}
+
+.vhalign-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 3em 1em 3em;
+}
+
+.bottom-image {
+  position: absolute;
+  bottom: 1em;
+  left: 0;
+  right: 0;
+}
+
+.faux-4-panels-per-row {
+  position: absolute;
+  top: 20%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  padding: 1em 3em 1em 3em;
+}
+
+.left-1of2-col {
+  float: left;
+  width: 21%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.left-2of2-col {
+  float: left;
+  width: 21%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.right-1of2-col {
+  float: left;
+  width: 21%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.right-2of2-col {
+  float: left;
+  width: 21%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}

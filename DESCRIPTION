@@ -1,0 +1,20 @@
+Title: CDS 411 Course Materials
+Depends:
+  R (>= 3.5)
+Imports:
+  dplyr (>= 0.7.6),
+  fs (>= 1.2.6),
+  kableExtra (>= 0.9.0),
+  knitr (>= 1.20),
+  reticulate (>= 1.10),
+  rlang (>= 0.2.2),
+  rmarkdown (>= 1.10),
+  tidyr (>= 0.8.1),
+  xaringan (>= 0.7)
+Remotes:
+  r-lib/fs,
+  r-lib/rlang,
+  rstudio/reticulate,
+  rstudio/rmarkdown,
+  yihui/xaringan
+
